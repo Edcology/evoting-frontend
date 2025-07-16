@@ -5,7 +5,7 @@ import Privacy from '../components/Privacy'
 
 const CheckYourMail = () => {
   return (
-    <div className='flex flex-col items-center h-screen justify-center -mt-10'>
+    <div className='lg:w-md lg:mx-auto flex flex-col items-center h-screen justify-center -mt-10'>
         <div className='bg-[#FFE3A5] p-5 rounded-full items-center justify-center mb-4'>
             <img src={mail} alt="Password icon" />
         </div>

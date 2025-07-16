@@ -55,7 +55,7 @@ const VerifyEmail = () => {
     }, [location, navigate]);
     
     return (
-        <div>
+        <div className='lg:w-md lg:mx-auto'>
             {
                 verificationStatus.loading ? (
                     <div className='flex flex-col items-center h-screen justify-center -mt-10 text-center px-2'>

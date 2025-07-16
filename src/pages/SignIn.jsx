@@ -39,7 +39,7 @@ const SignIn = () => {
     }
 
   return (
-    <div>
+    <div className='lg:w-md lg:mx-auto'>
         <div className='mt-20 mb-10 text-center'>
             <h1 className='text-[#FF7A00] font-medium text-4xl'>CS<span className='text-[#3152FA] italic'>Vote</span></h1>
             <p>Your voting experience redefined</p>

@@ -45,7 +45,7 @@ const Vote = () => {
     }
 
   return (
-    <div className='bg-[#FFF3D3] h-screen px-4'>
+    <div className='bg-[#FFF3D3] h-screen px-4 lg:w-md lg:mx-auto'>
         <Nav />
         <div className='flex items-center justify-center gap-2'>
             {candidates.map((_, index) => (

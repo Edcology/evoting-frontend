@@ -29,12 +29,13 @@ const AdminElection = () => {
         };
 
         fetchActiveElections();
-    }, );
+    }, []);
 
     const handleClick = async () => {
         setLoading(true);
         try {
             await adminService.startElection(elections[0].id);
+            await adminService.airdropSol()
             setStart(false);
             navigate(`/admin/dashboard/${elections[0].id}`)
         } catch (err) {
@@ -46,11 +47,27 @@ const AdminElection = () => {
             setIsLoading(false);
         }
     }
-  return (
-    <div>
-       { isLoading ? (
-                    <p>Loading...</p>
-                ) : error ? (
+
+    const deleteElection = async () => {
+        setLoading(true);
+        try {
+            await adminService.startElection(elections[0].id);
+            await adminService.endElection(elections[0].id);
+            await adminService.closeElection(elections[0].id);
+        } catch (err) {
+            const message = err.response?.data?.message || 'Failed to delete election';
+            setError(message);
+        } finally {
+            setClicked(false)
+            window.location.reload();
+        }
+    }
+
+    return (
+        <div>
+            { isLoading ? (
+                <p>Loading...</p>
+            ) : error ? (
                     <p className='text-red-500'>{error}</p>
                 ) : (
                     <div className='mt-4'>
@@ -67,7 +84,31 @@ const AdminElection = () => {
                         <p className='mb-6 text-sm'>Your actions are irreversible</p>
                         <div className='flex justify-between gap-8'>
                             <button onClick={() => setClicked(false)} className='text-[#FF7A00] cursor-pointer border border-[#FF7A00] p-1 rounded-xl px-12'>Cancel</button>
-                            <button className='text-white bg-[#FF7A00] rounded-xl p-1 px-4'>Delete Election</button>
+                            <button
+                              onClick={deleteElection}
+                              className='text-white bg-[#FF7A00] rounded-xl p-1 px-4 cursor-pointer flex items-center justify-center min-w-[120px]'
+                              disabled={loading}
+                            >
+                              {loading ? (
+                                <svg className="animate-spin h-5 w-5 mr-2 text-white" viewBox="0 0 24 24">
+                                  <circle
+                                    className="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    strokeWidth="4"
+                                    fill="none"
+                                  ></circle>
+                                  <path
+                                    className="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                  ></path>
+                                </svg>
+                              ) : null}
+                              {loading ? "Deleting..." : "Delete Election"}
+                            </button>
                         </div>
                     </div>
                 </div>

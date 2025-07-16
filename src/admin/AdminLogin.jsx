@@ -39,7 +39,7 @@ const AdminLogin = () => {
     }
 
   return (
-    <div>
+    <div className='lg:w-md lg:mx-auto'>
         <div className='mt-20 mb-10 text-center'>
             <h1 className='text-[#FF7A00] font-medium text-4xl'>CS<span className='text-[#3152FA] italic'>Vote</span></h1>
             <p>Your voting experience redefined</p>
@@ -81,7 +81,7 @@ const AdminLogin = () => {
                     </svg>
                 ): "Sign in"}
             </button>
-            <p className='text-center font-medium'>You don't have an account? <span className='text-[#FF7A00]'><Link to='/sign-up'>Sign up</Link></span></p>
+            <p className='text-center font-medium'>You don't have an account? <span className='text-[#FF7A00]'><Link to='/admin/register'>Sign up</Link></span></p>
         </form>
         <Privacy />
     </div>

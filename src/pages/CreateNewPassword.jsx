@@ -43,7 +43,7 @@ const CreateNewPassword = () => {
         }
     }
   return (
-    <div className='flex flex-col items-center h-screen justify-center px-4 -mt-10'>
+    <div className='lg:w-md lg:mx-auto flex flex-col items-center h-screen justify-center px-4 -mt-10'>
         <div className='flex flex-col items-center justify-center'>
             <div className='bg-[#FFE3A5] p-5 px-6 rounded-full flex flex-col items-center justify-center mb-6'>
                 <img src={pswd} alt="Password icon" />

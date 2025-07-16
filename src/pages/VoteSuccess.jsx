@@ -38,7 +38,7 @@ const VoteSuccess = () => {
     }
 
     return (
-        <div className='flex flex-col items-center justify-center h-screen bg-[#FFF3D3]'>
+        <div className='lg:w-md lg:mx-auto flex flex-col items-center justify-center h-screen bg-[#FFF3D3]'>
             <div>
                 <div className='flex flex-col items-center'>
                     <div>

@@ -83,6 +83,7 @@ export const adminService = {
     startElection: (electionId) => api.post(`/elections/${electionId}/start`),
     endElection: (electionId) => api.post(`/elections/${electionId}/end`),
     closeElection: (electionId) => api.post(`/elections/${electionId}/close`),
-    getAdminProfile: () => api.get('/admin/my')
+    getAdminProfile: () => api.get('/admin/my'),
+    airdropSol: () => api.post('/airdrop/all')
 }
 export default api;

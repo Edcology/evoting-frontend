@@ -7,7 +7,7 @@ const ElectionEnd = () => {
     const { electionId } = location.state || {}
 
     return (
-        <div className='bg-[#FFF3D3] flex flex-col items-center h-screen justify-center px-4'>
+        <div className='bg-[#FFF3D3] flex flex-col items-center h-screen justify-center px-4 lg:w-md lg:mx-auto'>
             <div className='bg-[#FFE3A5] p-5 rounded-full items-center justify-center mb-4'>
                 <img src={end} alt="Election End" />
             </div>

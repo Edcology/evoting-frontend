@@ -37,7 +37,7 @@ const ElectionResults = () => {
     }
 
     return (
-        <div className='px-4'>
+        <div className='px-4 lg:w-md lg:mx-auto'>
             <Nav />
             <div className='w-full p-2 mt-2 bg-[#DCEDFF] text-center text-[#507CFF] rounded-2xl'>
                 <h1 className='font-medium text-xl'>2025/2026 SUG Election</h1>

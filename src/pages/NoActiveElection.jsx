@@ -4,7 +4,7 @@ import NoActiveElec from '../assets/no-active-election.png'
 
 const NoActiveElection = () => {
   return (
-    <div className='px-4'>
+    <div className='px-4 lg:w-md lg:mx-auto'>
       <div className='md:hidden'>
         <Nav />
       </div>

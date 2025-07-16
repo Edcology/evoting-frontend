@@ -36,7 +36,7 @@ const VoteSummary = () => {
     }
 
     return (
-        <div className='px-4 flex flex-col h-screen items-center'>
+        <div className='lg:w-md lg:mx-auto px-4 flex flex-col h-screen items-center'>
             <h1 className='mb-5 text-2xl mt-4 text-[#461B04] font-medium text-left w-full'>Vote Summary</h1>
             <div className='flex flex-col gap-4 w-full'>
                 {voteSummary.map((vote) => (

@@ -5,7 +5,7 @@ import Privacy from '../components/Privacy'
 
 const VerifyAccount = () => {
   return (
-    <div className='flex flex-col items-center h-screen justify-center -mt-10 text-center px-2'>
+    <div className='lg:w-md lg:mx-auto flex flex-col items-center h-screen justify-center -mt-10 text-center px-2'>
         <div className='bg-[#FFE3A5] p-4 rounded-full flex flex-col items-center justify-center mb-6'>
             <img src={verify} alt="Password icon" />
         </div>

@@ -8,7 +8,7 @@ import Privacy from '../components/Privacy';
 const NewPasswordCreated = () => {
   const [isLoading] = useState(false);
   return (
-    <div className='flex flex-col items-center h-screen justify-center px-4 -mt-10'>
+    <div className='lg:w-md lg:mx-auto flex flex-col items-center h-screen justify-center px-4 -mt-10'>
         <div className='items-center justify-center mb-4'>
             <img src={npswd} alt="New Password Icon" />
         </div>

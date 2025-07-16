@@ -65,8 +65,8 @@ const AdminRegister = () => {
     }
 
     return (
-        <div>
-            <div className='mt-20 mb-10 text-center'>
+        <div className='lg:w-md lg:mx-auto p-8 pt-0'>
+            <div className='mt-20 mb-10 text-center lg:mt-10'>
                 <h1 className='text-[#FF7A00] font-medium text-4xl'>CS<span className='text-[#3152FA] italic'>Vote</span></h1>
                 <p>Your voting experience redefined</p>
             </div>
@@ -165,7 +165,7 @@ const AdminRegister = () => {
                         </svg>
                     ): "Sign up"}
                 </button>
-                <p className='text-center font-medium'>Already have an account? <span className='text-[#FF7A00]'><Link to='/sign-in'>Sign in</Link></span></p>
+                <p className='text-center font-medium'>Already have an account? <span className='text-[#FF7A00]'><Link to='/admin/login'>Sign in</Link></span></p>
             </form>
             <div className='text-center text-sm px-4'>
                 <p>Our <span className='font-medium text-[#FF7A00]'>Privacy Policy</span> and <span className='font-medium text-[#FF7A00]'>Terms of Service</span></p>

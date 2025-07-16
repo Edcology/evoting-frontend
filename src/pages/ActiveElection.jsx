@@ -25,7 +25,7 @@ const ActiveElection = () => {
     }, []);
 
     return (
-        <div className='px-4'>
+        <div className='lg:w-md lg:mx-auto px-4'>
             <Nav />
             <div className='px-1 mt-4'>
                 <h1 className='font-medium text-xl'>Ongoing Elections</h1>
