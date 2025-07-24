@@ -8,7 +8,7 @@ import Privacy from '../components/Privacy';
 const Verified = () => {
   const [isLoading] = useState(false);
   const {user} = useAuth();
-  console.log(user.user);
+  console.log(user);
   return (
     <div className='lg:w-md lg:mx-auto flex flex-col items-center h-screen justify-center px-4 -mt-10'>
         <div className='items-center justify-center mb-4'>

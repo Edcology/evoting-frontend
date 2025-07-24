@@ -20,7 +20,7 @@ const ElectionPage = () => {
           electionService.getElectionDetails(electionId),
           electionService.checkVoteStatus(electionId)
         ]);
-        console.log(statusResponse.data.voteStatus)
+        console.log(electionResponse.data.election)
         setElection(electionResponse.data.election);
         setVoteStatus(statusResponse.data.voteStatus);
       } catch (err) {

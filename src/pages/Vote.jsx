@@ -58,7 +58,7 @@ const Vote = () => {
             ))}
         </div>
         <div className='flex flex-col items-center justify-center pt-4 w-4xs h-[400px] rounded-2xl mb-4'>
-            <img src={current?.image || 'https://fastly.picsum.photos/id/19/2500/1667.jpg?hmac=7epGozH4QjToGaBf_xb2HbFTXoV5o8n_cYzB7I4lt6g'} 
+            <img src={current?.imageUrl} 
               alt={current?.name} className='w-4xs h-[400px]' />
         </div>
         <div className='text-center mb-2'>
